@@ -6,29 +6,36 @@ const app = express();
 //   res.send("Hello World this is test route");
 // });
 
-app.get("/user",(req, res) => {
-    res.send({ "name" : "Harsh", "age" : 24 });
+// app.get("/ab*c",(req, res) => {
+//     res.send({ "name" : "Harsh", "age" : 24 });
+// });
+
+
+app.get("/user/:userId/:name/:password",(req, res) => {
+   console.log(req.params);
+   res.send("Hello World");
 });
 
-app.post("/user",(req, res) => {
-    console.log("This is post request");
-    res.send({ "This is post request" : "This is post request" });
-});
 
-app.delete("/user",(req, res) => {
-    console.log("This is delete request");
-    res.send({ "This is delete request" : "This is delete request" });
-});
+// app.post("/user",(req, res) => {
+//     console.log("This is post request");
+//     res.send({ "This is post request" : "This is post request" });
+// });
 
-app.put("/user",(req, res) => {
-    console.log("This is put request");
-    res.send({ "This is put request" : "This is put request" });
-});
+// app.delete("/user",(req, res) => {
+//     console.log("This is delete request");
+//     res.send({ "This is delete request" : "This is delete request" });
+// });
 
-app.patch("/user",(req, res) => {
-    console.log("This is patch request");
-    res.send({ "This is patch request" : "This is patch request" });
-});
+// app.put("/user",(req, res) => {
+//     console.log("This is put request");
+//     res.send({ "This is put request" : "This is put request" });
+// });
+
+// app.patch("/user",(req, res) => {
+//     console.log("This is patch request");
+//     res.send({ "This is patch request" : "This is patch request" });
+// });
 
 
 
